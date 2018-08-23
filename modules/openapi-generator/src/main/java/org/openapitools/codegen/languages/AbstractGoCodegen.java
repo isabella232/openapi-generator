@@ -83,7 +83,8 @@ public abstract class AbstractGoCodegen extends DefaultCodegen implements Codege
                         "complex64",
                         "complex128",
                         "rune",
-                        "byte")
+                        "byte",
+                        "interface{}")
         );
 
         instantiationTypes.clear();
@@ -107,6 +108,7 @@ public abstract class AbstractGoCodegen extends DefaultCodegen implements Codege
         typeMapping.put("binary", "*os.File");
         typeMapping.put("ByteArray", "string");
         typeMapping.put("object", "map[string]interface{}");
+        typeMapping.put("any", "interface{}");
 
         importMapping = new HashMap<String, String>();
 

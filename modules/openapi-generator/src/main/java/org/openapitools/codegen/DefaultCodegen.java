@@ -918,6 +918,7 @@ public class DefaultCodegen implements CodegenConfig {
         typeMapping.put("char", "String");
         typeMapping.put("double", "Double");
         typeMapping.put("object", "Object");
+        typeMapping.put("any", "Object");
         typeMapping.put("integer", "Integer");
         typeMapping.put("ByteArray", "byte[]");
         typeMapping.put("binary", "File");
@@ -1378,7 +1379,7 @@ public class DefaultCodegen implements CodegenConfig {
             return schema.getType();
         }
 
-        return "object";
+        return "any";
     }
 
     /**
